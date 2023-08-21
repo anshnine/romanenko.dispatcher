@@ -48,7 +48,6 @@ class romanenko_dispatcher extends CModule
         }
         $GLOBALS["APPLICATION"]->IncludeAdminFile(Loc::getMessage("ROMANENKO_DISPATCHER_INSTALL_TITLE"), $this->GetPath() . "/install/step.php");
 
-       EventManager::getInstance()->addEventHandler("main", "OnAfterUserUpdate", $this->MODULE_ID, "Romanenko\Dispatcher\Event", "eventHandler");
     }
 
     function DoUninstall()
